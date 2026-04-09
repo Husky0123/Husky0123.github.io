@@ -1,1 +1,193 @@
 
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人履歷 | My Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --accent-color: #0984e3;
+            --text-color: #636e72;
+            --bg-color: #f5f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        /* Header 區域 */
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        /* 區塊標題 */
+        h2 {
+            color: var(--accent-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            font-size: 1.5rem;
+        }
+
+        /* 經歷與學歷項目 */
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: #2d3436;
+        }
+
+        .item-sub {
+            color: var(--accent-color);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        /* 技能標籤 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--bg-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #b2bec3;
+        }
+
+        /* 響應式設定 */
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 20px; }
+            .item-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>你的姓名</h1>
+        <div class="contact-info">
+            📧 email@example.com | 📱 0912-345-678 | 📍 台灣, 台北
+        </div>
+        <div class="contact-info" style="margin-top: 10px;">
+            🔗 <a href="#" style="color: var(--accent-color); text-decoration: none;">GitHub</a> | 🔗 <a href="#" style="color: var(--accent-color); text-decoration: none;">LinkedIn</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>自我介紹</h2>
+        <p>在這裡寫下一段簡短而有力的自我介紹。描述你的專業背景、核心競爭力，以及你對未來工作的熱情。例如：我是一位熱愛技術的開發者，擅長解決複雜問題並持續學習新技術。</p>
+    </section>
+
+    <section>
+        <h2>專業技能</h2>
+        <div class="skills-container">
+            <span class="skill-tag">HTML / CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Cloudflare</span>
+            <span class="skill-tag">UI/UX Design</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>工作經歷</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>某某科技股份有限公司</span>
+                <span>2022.01 - 至今</span>
+            </div>
+            <div class="item-sub">前端工程師</div>
+            <ul>
+                <li>負責公司官網維護與效能優化。</li>
+                <li>導入自動化部署流程，減少 30% 手動出錯率。</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>專案經驗</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>個人履歷網站專案</span>
+                <span>2024.04</span>
+            </div>
+            <p>使用 GitHub Pages 與 Cloudflare 部署的響應式個人網頁，實現自定義域名與 SSL 加密。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>學歷</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>國立某某大學</span>
+                <span>2018.09 - 2022.06</span>
+            </div>
+            <div class="item-sub">資訊工程學系 - 學士</div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 你的姓名. Powered by GitHub Pages & Cloudflare.
+    </footer>
+</div>
+
+</body>
+</html>
