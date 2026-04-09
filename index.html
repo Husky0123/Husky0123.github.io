@@ -1,39 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人履歷 | My Resume</title>
+    <title>李宗諺 | 個人首頁</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2d3436;
-            --accent-color: #0984e3;
-            --text-color: #636e72;
-            --bg-color: #f5f6fa;
+            --accent-color: #6c5ce7; /* 換個有個性的紫色 */
+            --bg-color: #f9f9fb;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Noto Sans TC', sans-serif;
             background-color: var(--bg-color);
             color: var(--primary-color);
-            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
+        .card {
             background: white;
+            width: 90%;
+            max-width: 500px;
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .school {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .hobbies {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 2;
+        }
+
+        .hobbies-title {
+            font-weight: bold;
+            color: #636e72;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .hobby-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: white;
+            border: 1px solid #dfe6e9;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #b2bec3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>李宗諺</h1>
+    <span class="school">勤益科技大學</span>
+
+    <div class="hobbies">
+        <span class="hobbies-title">關於我的興趣</span>
+        <div class="hobby-tags">
+            <span class="tag">🐎 養馬</span>
+            <span class="tag">🐕 養狗</span>
+            <span class="tag">🐉 養龍</span>
+            <span class="tag">🐑 養羊</span>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 李宗諺. Designed for GitHub Pages.
+    </footer>
+</div>
+
+</body>
+</html>
         }
 
         /* Header 區域 */
